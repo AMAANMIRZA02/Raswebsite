@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAS catering service</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+</head>
+<body>
+    
+    <section id="hero">
+        <img src="bg.jpg.jpg" alt="img" class="img">
+        <h1> Welcom to RAS catering</h1>
+        <p>Delicious food for every occasion - serving all across RAS</p>
+        <a href="#manu"><button>view menu</button></a>
+    </section>
+
+    <section id="menu">
+        <h2>Our Menu</h2>
+        
+        <section id="menu">
+            <h2>Our Menu</h2>
+        
+            <div class="menu-item">
+                <h3>Biryani</h3>
+                <p>₹150 per plate</p>
+                <button onclick="addToCart('Biryani', 150)">Add to Cart</button>
+            </div>
+        
+            <div class="menu-item">
+                <h3>Paneer Butter Masala</h3>
+                <p>₹120 per plate</p>
+                <button onclick="addToCart('Paneer Butter Masala', 120)">Add to Cart</button>
+            </div>
+        
+            <div class="menu-item">
+                <h3>Chicken 65</h3>
+                <p>₹180 per plate</p>
+                <button onclick="addToCart('Chicken 65', 180)">Add to Cart</button>
+            </div>
+        
+            <div class="menu-item">
+                <h3>Gulab Jamun</h3>
+                <p>₹60 (2 pcs)</p>
+                <button onclick="addToCart('Gulab Jamun', 60)">Add to Cart</button>
+            </div>
+        
+            <div id="cart"></div>
+        </section>
+
+    </section>
+    <section id="checkout">
+        <h2>Checkout</h2>
+        <form id="orderForm">
+            <label for="name">Full Name:</label><br>
+            <input type="text" id="name" required><br><br>
+    
+            <label for="phone">Phone Number:</label><br>
+            <input type="tel" id="phone" required><br><br>
+    
+            <label for="address">Delivery Address:</label><br>
+            <textarea id="address" rows="3" required></textarea><br><br>
+    
+            <label for="date">Event Date & Time:</label><br>
+            <input type="datetime-local" id="date" required><br><br>
+    
+            <button type="button" onclick="placeOrder()">Place Order</button>
+            <button type="button" onclick="payNow()">💳 Pay Now</button>
+
+        </form>
+    
+        <div id="orderMessage"></div>
+    </section>
+
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are a passionate catering team from RAS providing fresh, flavorful dishes for all events. Quality,
+            hygiene, and taste are our top priorities!</p>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>📞 +91 8529861271</p>
+        <p>📧 amaankhan01058@gmail.com</p>
+        <p>📍 Address: Banjara Hills, RAS</p>
+        <a href="https://web.whatsapp.com/" target="_blank">
+            <button>Chat on WhatsApp</button>
+        </a>
+    </section>
+
+    <footer>
+        <p>© 2025 RAS Catering | All Rights Reserved Amaan Mirza</p>
+    </footer>
+
+</body>
+<script src="script.js"></script>
+</html>
